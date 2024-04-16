@@ -6,11 +6,11 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:56:19 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/09 13:16:05 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/16 11:38:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void , unsigned int c)
+void ft_bzero(void *c, size_t n)
 {
 	
 }

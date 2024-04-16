@@ -6,13 +6,13 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:51:31 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/12 15:32:47 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/15 15:35:22 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char str)
+int	ft_isprint(int a)
 {
-	return (str >= 40 && str <= 176);
+	return (a >= 40 && a <= 176);
 }

@@ -6,14 +6,15 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:21:05 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/12 15:32:15 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/16 11:31:13 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char str)
+int	ft_isalnum(int a)
 {
-	return ((str >= '0' && str <= '9')
-		|| (str >= 'A' && str <= 'Z') || (str >= 'a' && str <= 'z'));
+	return ((a >= '0' && a <= '9')
+		|| (a >= 'A' && a <= 'Z')
+		|| (a >= 'a' && a <= 'z'));
 }

@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:27:54 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/12 15:33:34 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/16 11:32:48 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,4 @@ unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	dest[i] = '\0';
 	return (ft_strlen(src));
-}
-
-int main() {
-    char src[] = "Hello, world!";
-    char dest[20]; // Tamaño suficiente para contener la cadena src
-
-    unsigned int length = ft_strlcpy(dest, src, sizeof(dest));
-
-    printf("La cadena copiada es: %s\n", dest);
-    printf("La longitud de la cadena original es: %u\n", length);
-
-    return 0;
 }
