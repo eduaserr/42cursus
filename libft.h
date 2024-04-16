@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/16 16:28:14 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/16 18:43:44 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		ft_isalnum(int a);
 int		ft_isascii(int a);
 int		ft_isprint(int a);
 size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
