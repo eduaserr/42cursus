@@ -6,38 +6,52 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:24:06 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/16 11:33:37 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/16 13:30:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
-	i = -1;
-	while (str[++i]);
+	i = 0;
+	while (str[i])
+		i++;
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	j;
-	unsigned int	i;
-	unsigned int	swp;
+	size_t		l_dest;
+	size_t		j;
 
-	i = ft_strlen(dest);
-	swp = i;
-	if (size <= i)
+	l_dest = ft_strlen(dest);
+	if (size <= l_dest)
 		return (size + ft_strlen(src));
 	j = 0;
-	while (src[j] && size - 1 > i)
+	while (src[j] && size - 1 > l_dest + j)
 	{
-		dest[i] = src[j];
-		i++;
+		dest[l_dest + j] = src[j];
 		j++;
 	}
-	dest[i] = '\0';
-	return (swp + ft_strlen(src));
+	dest[l_dest] = '\0';
+	return (ft_strlen(dest) + ft_strlen(src));
+}
+
+int main() {
+    char src[] = "World!";
+    char dest[] = "Hello";
+	char dest2[] = "Hello";
+
+    unsigned int length = ft_strlcat(dest, src, 5);
+	unsigned int length2 = strlcat(dest2, src, 5);
+
+    printf("La cadena copiada es: %s\n", dest);
+    printf("La longitud de la cadena original es: %u\n", length);
+    printf("La cadena copiada es: %s\n", dest2);
+    printf("La longitud de la cadena original es: %u\n", length2);
+	return (0);
 }
