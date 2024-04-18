@@ -6,13 +6,8 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:39:19 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/16 16:05:21 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/18 18:57:54 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*strchr(const char *s, int c)
-{
-	
-}
