@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/19 15:33:03 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:43:26 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,5 +136,14 @@ void	*ft_memset(void *b, int c, size_t len);
  * @param n 
  */
 void	ft_bzero(void *s, size_t n);
-
+/**
+ * @brief Copies n bytes from memory area src to memory area dst. If dst
+	and src overlap, behavior is undefined.
+ * 
+ * @param dst 
+ * @param src 
+ * @param n 
+ * @return (void*) Returns the original value of dst.
+ */
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 #endif
