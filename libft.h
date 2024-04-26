@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/22 17:08:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/26 11:54:07 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,7 @@ void	ft_bzero(void *s, size_t n);
  */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif

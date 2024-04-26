@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:27:54 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/19 17:20:40 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:46:17 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	i = -1;
 	if (dstsize == 0)
 		return (ft_strlen(src));
-	while (src[++i] && --dstsize)
+	while (src[++i] && dstsize--)
 	{
 		dest[i] = src[i];
 	}
