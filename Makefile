@@ -6,7 +6,7 @@
 #    By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/04/26 11:54:11 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/04/29 19:56:26 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 
 SRCS	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		ft_strlen.c ft_strlcat.c ft_strlcpy.c ft_tolower.c ft_toupper.c ft_memset.c \
-		ft_bzero.c ft_memcpy.c ft_memmove.c ft_strchr.c ft_strrchr.c ft_strncmp.c
+		ft_bzero.c ft_memcpy.c ft_memmove.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memcpy.c ft_memcmp.c ft_strnstr.c
 
 OBJS	= $(SRCS:.c=.o)
 

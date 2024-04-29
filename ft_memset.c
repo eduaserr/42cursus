@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:16:13 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/24 17:24:17 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/04/29 17:40:06 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,4 @@ void	*ft_memset(void *b, int c, size_t len)
 		len--;
 	}
 	return (b);
-}
-
-int	main(void)
-{
-	char	src[] = "Hello";
-
-	printf("%s\n", ft_memset(src, 'a', sizeof(src)));
-	return (0);
 }
