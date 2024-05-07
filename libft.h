@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/04/30 17:33:54 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/07 13:07:51 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_list
 	and returns non-zero if tests true.
  */
 int		ft_isalnum(int a);
+
 /**
  * @brief Tests for any character for which isupper or
 	islower is true. 
@@ -42,6 +43,7 @@ int		ft_isalnum(int a);
 	returns non-zero if tests true.
  */
 int		ft_isalpha(int a);
+
 /**
  * @brief Function tests for an ASCII character, which is any character
 	between 0 and octal 0177 inclusive.
@@ -50,6 +52,7 @@ int		ft_isalpha(int a);
  * @return (int) 
  */
 int		ft_isascii(int a);
+
 /**
  * @brief Tests for a decimal digit character. 
  * 
@@ -66,6 +69,7 @@ int		ft_isdigit(int a);
      returns non-zero if tests true.
  */
 int		ft_isprint(int a);
+
 /**
  * @brief Lower case to upper case letter conversion.
  * @param c 
@@ -73,6 +77,7 @@ int		ft_isprint(int a);
 	otherwise, is returned unchanged.
  */
 int		ft_toupper(int c);
+
 /**
  * @brief Upper case to lower case letter conversion.
  * 
@@ -81,6 +86,7 @@ int		ft_toupper(int c);
 	otherwise, is returned unchanged.
  */
 int		ft_tolower(int c);
+
 /**
  * @brief Writes len bytes of value c (converted to an unsigned char)
 	to the string b.
@@ -91,6 +97,7 @@ int		ft_tolower(int c);
  * @return (void*) Returns its first argument.
  */
 void	*ft_memset(void *b, int c, size_t len);
+
 /**
  * @brief Writes n zeroed bytes to the string s. If n is zero, does nothing.
 	Does not return a value.
@@ -99,6 +106,7 @@ void	*ft_memset(void *b, int c, size_t len);
  * @param n 
  */
 void	ft_bzero(void *s, size_t n);
+
 /**
  * @brief The calloc() function contigously allocates enough space for count
 	objects that are size bytes of memory each and returns a pointer to the
@@ -110,6 +118,7 @@ void	ft_bzero(void *s, size_t n);
 	they return a NULL pointer and set errno to ENOMEM.
  */
 void	*ft_calloc(size_t count, size_t size);
+
 /**
  * @brief Locates the first occurence of c (convered to an unsigned char)
 	in string s. Returns a pointer to the byte located, or NULL
@@ -120,6 +129,7 @@ void	*ft_calloc(size_t count, size_t size);
  * @param n 
  */
 void	*ft_memchr(const void *s, int c, size_t n);
+
 /**
  * @brief Copies n bytes from memory area src to memory area dst. If dst
 	and src overlap, behavior is undefined.
@@ -131,6 +141,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 	behavior is undefined. Should use memove(3) instead.
  */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+
 /**
  * @brief Copies len bytes from string src to string dst.
 	The two strings may overlap; always done in a non-destructive manner.
@@ -141,6 +152,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
  * @return (void*) Returns the original value of dst.
  */
 void	*ft_memmove(void *dst, const void *src, size_t len);
+
 /**
  * @brief Compares byte string s1 against byte string s2.
 	Both strings are assumed to be n bytes long.
@@ -153,6 +165,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 	(treated as unsigned char values).
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
 /**
  * @brief Locates the first occurence of c (converted to a char) in the string
 	pointed to by s. Null character terminated is considered to be part of the
@@ -164,6 +177,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 	character does not appear in the string.
  */
 char	*ft_strchr(const char *s, int c);
+
 /**
  * @brief Locates the last occurence of c in the s.
  * 
@@ -185,6 +199,7 @@ char	*ft_strrchr(const char *s, int c);
 	Is done using unsigned characters.
  */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
 /**
  * @brief Locates the first occurence of the null-terminated string needle in the
 	string haystack, where not more than len characters are searched.
@@ -198,6 +213,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	first character of the first occurence of needle is returned.
  */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
 /**
  * @brief Allocates sufficient memory for a copy of the string s1, does the
 	copy, and returns a pointer to it. The pointer may subsequently be used as
@@ -208,6 +224,37 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 	is returned and errno is set to ENOMEM.
  */
 char	*ft_strdup(const char *s1);
+
+/**
+ * @brief Returns a substring in the string s. The substring starts from index
+	'start' and has a maximum length 'len'.
+ * 
+ * @param s 
+ * @param start 
+ * @param len 
+ * @return (char*) Returns the substring. NULL if malloc fails.
+ */
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+
+/**
+ * @brief return the new string, formed by the concatenation of 's1' and 's2'.
+ * 
+ * @param s1 
+ * @param s2 
+ * @return (char*) Returns the new string. NULL if malloc fails.
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/**
+ * @brief Remove all characters from the string 'set' at the beginning and at
+	the end of 's1', until find a character not belonging to 'set'.
+ * 
+ * @param s1 
+ * @param set 
+ * @return (char*) Return trimmed string. NULL if malloc fails.
+ */
+char	*ft_strtrim(const char *s1, const char *set);
+
 /**
  * @brief Converts the initial portion of the string pointed to by str to
 	int representation.
@@ -215,8 +262,8 @@ char	*ft_strdup(const char *s1);
  * @param str 
  * @return (int)
  */
-
 int		ft_atoi(const char *str);
+
 /**
  * @brief Concatenate strings. Function take the full size of the
 	destination buffer and guarantee NUL-termination if there is room.
@@ -234,6 +281,7 @@ int		ft_atoi(const char *str);
  */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
+
 /**
  * @brief Copy strings. Function take the full size of the
 	destination buffer and guarantee NUL-termination if there is room.
@@ -247,6 +295,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 	(length of src).
  */
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
+
 /**
  * @brief Computes the length of the string. Function attempts to
 	compute the length of s, but never scans beyond the first maxlen bytes of s.
@@ -256,4 +305,51 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
      terminating NUL character.
  */
 size_t	ft_strlen(const char *s);
+
+/**
+ * @brief Using malloc, generates a string that represents the value received
+ * as argument. Negative numbers must be taken into account.
+ * @param n 
+ * @return Returns the string that equals to such number or NULL if malloc fails
+ * @warning This function uses malloc
+*/
+char	*ft_itoa(int n);
+
+/**
+ * @brief Sends character c to the file descriptor fd specified
+ * @param c 
+ * @param fd 
+ * @return 
+ * @warning This function uses write
+*/
+void	ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief Sends the string s to the file descriptor fd specified.
+ * @param s 
+ * @param fd 
+ * @return 
+ * @warning This function uses write
+*/
+void	ft_putstr_fd(char *s, int fd);
+
+/**
+ * @brief Sends the string s to the file descriptor fd specified followed
+ * by a newline
+ * @param s 
+ * @param fd 
+ * @return 
+ * @warning This function uses write
+*/
+void	ft_putendl_fd(char *s, int fd);
+
+/**
+ * @brief Sends the int n to the file descriptor fd specified
+ * @param n
+ * @param fd
+ * @return 
+ * @warning This function uses write
+*/
+void	ft_putnbr_fd(int n, int fd);
+
 #endif

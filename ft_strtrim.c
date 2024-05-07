@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 15:01:40 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/03 16:05:47 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/05/03 15:52:35 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/05/07 11:19:40 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*p;
-	int		i;
+	size_t	i;
+	size_t	len;
+	size_t	j;
 
-	i = -1;
-	p = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	len = ft_strlen(s1);
+	i = 0;
+	j = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (len > i && ft_strrchr(set, s1[len - 1]))
+		len--;
+	p = (char *)malloc(sizeof(char) * len - i + 1);
 	if (!p)
 		return (NULL);
-	while (s1[++i])
-		p[i] = s1[i];
-	p[i] = '\0';
+	while (i < len)
+	{
+		p[j] = s1[i];
+		j++;
+		i++;
+	}
+	p[j] = '\0';
 	return (p);
 }
