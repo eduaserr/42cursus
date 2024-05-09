@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/07 13:07:51 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:49:59 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,7 +243,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
  * @param s2 
  * @return (char*) Returns the new string. NULL if malloc fails.
  */
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 /**
  * @brief Remove all characters from the string 'set' at the beginning and at
@@ -254,6 +254,28 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @return (char*) Return trimmed string. NULL if malloc fails.
  */
 char	*ft_strtrim(const char *s1, const char *set);
+
+/**
+ * @brief For each 's' string`s character. Function 'f' giving as parameters the
+	index of each character inside 's' and the character. genders a new string
+	with the result of successive use of 'f'.
+ * 
+ * @param s 
+ * @param f 
+ * @return (char*) The new string after correctly use of 'f' on each character.
+	NULL if malloc fails.
+ */
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+
+/**
+ * @brief Apply the function 'f' to each characters of the string 's', passing
+	its index as a first parameter. Each character is transmitted by address to
+	'f' so it can be modified if necessary.
+ * 
+ * @param s 
+ * @param f 
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**
  * @brief Converts the initial portion of the string pointed to by str to

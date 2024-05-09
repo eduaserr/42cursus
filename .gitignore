@@ -4,3 +4,5 @@
 .DS_Store
 main.c
 .vscode/
+*.dSYM
+*.swp
