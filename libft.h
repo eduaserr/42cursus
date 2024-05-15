@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/13 13:42:30 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/15 20:51:10 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,7 +233,7 @@ char	*ft_strdup(const char *s1);
  * @param len 
  * @return (char*) Returns the substring. NULL if malloc fails.
  */
-char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief return the new string, formed by the concatenation of 's1' and 's2'.
@@ -242,7 +242,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
  * @param s2 
  * @return (char*) Returns the new string. NULL if malloc fails.
  */
-char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief Remove all characters from the string 'set' at the beginning and at
@@ -252,7 +252,7 @@ char	*ft_strjoin(const char *s1, const char *s2);
  * @param set 
  * @return (char*) Return trimmed string. NULL if malloc fails.
  */
-char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_strtrim(char const *s1, char const *set);
 
 /**
  * @brief For each 's' string`s character. Function 'f' giving as parameters the
@@ -264,7 +264,7 @@ char	*ft_strtrim(const char *s1, const char *set);
  * @return (char*) The new string after correctly use of 'f' on each character.
 	NULL if malloc fails.
  */
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief Apply the function 'f' to each characters of the string 's', passing
@@ -344,7 +344,7 @@ char	*ft_itoa(int n);
  * @return (char**) Returns an array of strings resulting from the splitting of
 	's'. NULL if malloc fails.
  */
-char	**ft_split(const char *s, char c);
+char	**ft_split(char const *s, char c);
 
 /**
  * @brief Sends character 'c' to the file descriptor fd specified.

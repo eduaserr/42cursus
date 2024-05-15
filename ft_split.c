@@ -6,36 +6,13 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:15:53 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/14 17:59:30 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/15 20:53:42 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	*ft_strchr(const char *s, int c)
-// {
-// 	int		i;
-
-// 	i = -1;
-// 	while (s[++i])
-// 		if (s[i] == (char) c)
-// 			return ((char *) &s[i]);
-// 	if (s[i] == (char) c)
-// 		return ((char *) &s[i]);
-// 	return (NULL);
-// }
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	i;
-
-// 	i = -1;
-// 	while (s[++i])
-// 		;
-// 	return (i);
-// }
-
-char	**free_split(char **str, int i)
+static	char	**free_split(char **str, int i)
 {
 	while (--i >= 0)
 		free(str[i]);
@@ -43,7 +20,7 @@ char	**free_split(char **str, int i)
 	return (NULL);
 }
 
-int	wordcount(const char *s, char c)
+static	int	wordcount(char const *s, char c)
 {
 	int		n_word;
 	int		i;
@@ -62,24 +39,7 @@ int	wordcount(const char *s, char c)
 	return (n_word);
 }
 
-char	*fillwords(const char *s, int start, int end)
-{
-	char	*word;
-	int		i;
-
-	i = 0;
-	word = (char *)malloc(sizeof(char) * (end - start));
-	if (!word)
-		return (NULL);
-	while (start < end)
-	{
-		word[i++] = s[start++];
-	}
-	word[i] = '\0';
-	return (word);
-}
-
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		i;
@@ -88,34 +48,18 @@ char	**ft_split(const char *s, char c)
 
 	i = -1;
 	start = 0;
-	str = (char **)malloc(sizeof(char *) * wordcount(s, c) + 1);
-	if (!str)
+	str = ft_calloc(wordcount(s, c) + 1, sizeof(char *));
+	if (!str || !s)
 		return (NULL);
-	while (start < (int)ft_strlen(s))
+	while (++i < wordcount(s, c) && s[start])
 	{
-		while (ft_strchr(s + start, c) == s + start)
+		while (s[start] && ft_strchr(s + start, c) == s + start)
 			start++;
-		if (!ft_strchr(s + start, c))
-			end = ft_strlen(s);
-		else
-			end = ft_strchr(s + start, c) - s;
-		str[++i] = fillwords(s, start, end);
+		end = ft_strchr(s + start, c) - s;
+		str[i] = ft_substr(s, start, end - start);
 		if (!str[i])
 			return (free_split(str, i));
 		start = end;
 	}
-	str[++i] = NULL;
 	return (str);
 }
-
-// int main(void)
-// {
-// 	char **split;
-// 	int i;
-
-// 	i = -1;
-	
-// 	split  = ft_split("     olol", ' ');
-// 	while (split[++i])
-// 		printf("%s\n", split[i]);
-// }

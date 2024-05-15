@@ -6,13 +6,13 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:27:52 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/08 15:48:23 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/15 20:50:46 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 	size_t	i;
