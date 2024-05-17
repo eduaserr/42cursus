@@ -6,7 +6,7 @@
 #    By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/05/17 17:40:18 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/05/17 21:42:17 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,21 +32,23 @@ all : $(NAME)
 
 $(NAME)	: $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	ranlib $(NAME)
+
+bonus : $(OBJS) $(BONUS_OB)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OB)
+	ranlib $(NAME)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	${RM} ${OBJS} ${BONUS_OB}
+	$(RM) $(OBJS) $(BONUS_OB)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
-bonus : ${OBJS} ${BONUS_OB}
-	ar rc ${NAME} ${OBJS} ${BONUS_OB}
-
-rebonus : re bonus
+rebonus : fclean bonus
 
 .PHONY: all clean fclean re bonus rebonus
