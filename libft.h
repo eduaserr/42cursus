@@ -6,17 +6,14 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/15 20:51:10 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/16 17:27:33 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 
 typedef struct s_list
@@ -382,5 +379,14 @@ void	ft_putendl_fd(char *s, int fd);
  * @warning This function uses write.
 */
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

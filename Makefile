@@ -6,7 +6,7 @@
 #    By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/05/13 13:17:40 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/05/17 17:40:18 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,12 @@ SRCS	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_toupp
 		ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c\
 		ft_atoi.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_itoa.c ft_split.c\
 
+BONUS	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c\
+		ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
+
 OBJS	= $(SRCS:.c=.o)
+
+BONUS_OB = $(BONUS:.c=.o)
 
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
@@ -32,11 +37,16 @@ $(NAME)	: $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${BONUS_OB}
 
 fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus : ${OBJS} ${BONUS_OB}
+	ar rc ${NAME} ${OBJS} ${BONUS_OB}
+
+rebonus : re bonus
+
+.PHONY: all clean fclean re bonus rebonus
