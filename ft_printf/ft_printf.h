@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 20:38:00 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/23 14:05:35 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:09:38 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ typedef struct s_list
 	struct s_list	*next;
 }			t_list;
 /**
+ * @brief 
+ * 
  * @param str 
- * @return (Int) 
-*/
+ * @param ... 
+ * @return int 
+ */
 int		ft_printf(char const *str, ...);
 
 #endif
