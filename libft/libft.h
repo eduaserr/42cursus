@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:40:57 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/16 17:27:33 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:03:56 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -297,7 +297,6 @@ int		ft_atoi(const char *str);
 	Means initial length of 'dst' plus the length of 'src'. If the return value
 	is >= dstsize, the output string has been truncated.
  */
-
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 
 /**
