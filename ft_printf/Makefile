@@ -6,18 +6,18 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/05/23 19:16:51 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/05/24 16:35:10 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
 
-SRCS	= ft_printf.c ft_funlibft.c
+SRCS	= ft_printf.c ft_funlibft_pf.c
 
 OBJS	= $(SRCS:.c=.o)
 
 
-CC		= gcc
+CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 

@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 20:38:00 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/23 21:25:27 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/24 19:10:02 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+
+# define INT_BASE "0123456789"
+# define HEX_UPP_BASE "0123456789ABCDEF"
+# define HEX_LOW_BASE "0123456789abcdef"
 
 typedef struct s_list
 {
@@ -29,28 +33,37 @@ typedef struct s_list
  * @param str 
  * @return (int) 
  */
-int		ft_strlen(char *str);
+int		ft_strlen_pf(char *str);
 
 /**
  * @brief 
  * 
- * @param c
+ * @param a
  */
-void	ft_putchar(char c);
+void	ft_putchar_pf(char a, size_t counter);
 
 /**
  * @brief 
  * 
  * @param num
  */
-void	ft_putnbr(long long num, char *base);
+void	ft_putnbr_pf(unsigned long long num, char *base);
 
 /**
  * @brief 
  * 
  * @param str 
  */
-void	ft_putstr(char *str);
+void	ft_putstr_pf(char *str);
+/**
+ * @brief 
+ * 
+ * @param lst 
+ * @param str 
+ * @param count 
+ * @return (int)
+ */
+int		ft_fillformat_pf(va_list lst, char const *str, int count);
 
 /**
  * @brief 

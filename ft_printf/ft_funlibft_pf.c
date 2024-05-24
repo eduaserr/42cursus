@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_funlibft.c                                      :+:      :+:    :+:   */
+/*   ft_funlibft_pf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 18:43:02 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/23 21:21:31 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/24 19:17:59 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen_pf(char *str)
 {
 	int	i;
 
@@ -22,29 +22,32 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_putchar(char a)
+void	ft_putchar_pf(char a, size_t *count)
 {
 	write (1, &a, 1);
+	(*count)++;
 }
 
-void	ft_putnbr(long long num, char *base)
+void	ft_putnbr_pf(unsigned long long num, char *base, size_t *count)
 {
 	if (num < 0)
 	{
-		ft_putchar('-');
+		ft_putchar_pf('-', &count);
 		num *= -1;
 	}
-	if (num < ft_strlen(base))
-		ft_putchar(base[num]);
+	if (num < ft_strlen_pf(base))
+		ft_putchar_pf(base[num], &count);
 	else
 	{
-		ft_putnbr(num / ft_strlen(base), base);
-		ft_putnbr(num % ft_strlen(base), base);
+		ft_putnbr_pf(num / ft_strlen_pf(base), base, &count);
+		ft_putnbr_pf(num % ft_strlen_pf(base), base, &count);
 	}
 }
 
-void	ft_putstr(char *str)
+void	ft_putstr_pf(char *str, size_t *count)
 {
+	if (!str)
+		str = "(null)";
 	while (*str)
-		ft_putchar(*str++);
+		ft_putchar_pf(*str++, &count);
 }
