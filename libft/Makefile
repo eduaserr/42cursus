@@ -6,7 +6,7 @@
 #    By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/05/17 21:42:17 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/05/27 20:15:40 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,28 +24,29 @@ OBJS	= $(SRCS:.c=.o)
 
 BONUS_OB = $(BONUS:.c=.o)
 
-CC		= gcc
+CC	= gcc
 CFLAGS	= -Wall -Wextra -Werror
-RM		= rm -f
+RM	= rm -f
 
 all : $(NAME)
 
 $(NAME)	: $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rcs $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "Compiled succesfully"
 
 bonus : $(OBJS) $(BONUS_OB)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OB)
-	ranlib $(NAME)
+	@ar rcs $(NAME) $(OBJS) $(BONUS_OB)
+	@ranlib $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OB)
+	@$(RM) $(OBJS) $(BONUS_OB)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
