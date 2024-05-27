@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 20:38:00 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/24 19:10:02 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/27 19:54:58 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,37 @@ typedef struct s_list
  * @param str 
  * @return (int) 
  */
-int		ft_strlen_pf(char *str);
+size_t	ft_strlen_pf(char *str);
 
 /**
  * @brief 
  * 
  * @param a
  */
-void	ft_putchar_pf(char a, size_t counter);
+void	ft_putchar_pf(char a, int *count);
 
 /**
  * @brief 
  * 
- * @param num
+ * @param nbr
  */
-void	ft_putnbr_pf(unsigned long long num, char *base);
+void	ft_putnbr_pf(long long nbr, char *base, int *count);
 
 /**
  * @brief 
  * 
  * @param str 
  */
-void	ft_putstr_pf(char *str);
+void	ft_putstr_pf(char *str, int *count);
+
+/**
+ * @brief 
+ * 
+ * @param nbr 
+ * @param count 
+ */
+void	ft_putptr_pf(unsigned long long nbr, int *count);
+
 /**
  * @brief 
  * 
@@ -63,7 +72,7 @@ void	ft_putstr_pf(char *str);
  * @param count 
  * @return (int)
  */
-int		ft_fillformat_pf(va_list lst, char const *str, int count);
+int		ft_fillformat_pf(va_list lst, char str, int *count);
 
 /**
  * @brief 
@@ -73,6 +82,5 @@ int		ft_fillformat_pf(va_list lst, char const *str, int count);
  * @return (int)
  */
 int		ft_printf(char const *str, ...);
-
 
 #endif

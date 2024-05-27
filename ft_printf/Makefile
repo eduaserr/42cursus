@@ -6,7 +6,7 @@
 #    By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 14:05:06 by eduaserr          #+#    #+#              #
-#    Updated: 2024/05/24 16:35:10 by eduaserr         ###   ########.fr        #
+#    Updated: 2024/05/27 15:40:47 by eduaserr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,17 +24,18 @@ RM		= rm -f
 all : $(NAME)
 
 $(NAME)	: $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rcs $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "Compiled succesfully"
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
