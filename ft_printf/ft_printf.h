@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 20:38:00 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/27 20:47:09 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/05/31 12:20:04 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@
 # define INT_BASE "0123456789"
 # define HEX_UPP_BASE "0123456789ABCDEF"
 # define HEX_LOW_BASE "0123456789abcdef"
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}			t_list;
 
 /**
  * @brief Returns the total lenght of the string.
