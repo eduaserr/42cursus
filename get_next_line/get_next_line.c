@@ -6,54 +6,54 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/05/31 18:23:46 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/03 21:11:56 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-ssize_t	ft_read(int fd, char *buff)
+char	*ft_read(int fd, char *stash)
 {
 	ssize_t		bytes_read;
+	char		*buff;
 
-	buff = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
+	buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
 		return (NULL);
-	while (*buff != '\0')
-		bytes_read = read(fd, buff, BUFFER_SIZE);
-	if (bytes_read == -1 || bytes_read == 0)
+	bytes_read = read(fd, buff, BUFFER_SIZE);
+	if (bytes_read == -1)
 		return (NULL);
-	buff[BUFFER_SIZE] = '\0';
+	buff[bytes_read] = '\0';
+	if (bytes_read < BUFFER_SIZE)
+		stash = ft_strjoin(stash, buff);
+	stash = ft_strdup(buff);
+	return (stash);
 }
 
-char	*ft_line(char *buff, char *stash)
+char	*ft_line()
 {
-	int	i;
+	int i;
 
-	stash = (char *)malloc(sizeof(char) * BUFFER_SIZE);
-	if (!stash)
-		return (NULL);
 	i = -1;
-	while (buff[++i] != '\n' || buff[i] != '\0')
-		stash[i] = buff[i];
-	stash[i] = '\0';
-	return (stash);
+	while ( != '\n' ||  != '\0')
+		
+	[] = '\0';
+	return ();
 }
 
 char	*get_next_line(int fd)
 {
-	static char	*buff;
-	char		*stash;
-	char		*rest;
-	char		*line;
+	char			*buff;
+	static char		*stash;
+	char			*line;
 
-	if (fd < 0 || !fd)
+	stash = 0;
+	line = 0;
+	if (fd <= 0)
 		return (NULL);
-	ft_read(fd, buff);
-	line = ft_line(buff, stash);
-	if (!rest)
+	buff = ft_read(fd, buff);
+	if (!line)
 		return (NULL);
-	rest = ft_strchr(buff, '\n');
 	return (stash);
 }
 
