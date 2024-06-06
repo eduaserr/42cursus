@@ -6,17 +6,21 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 12:22:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/04 16:21:45 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/06 18:18:07 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr_gnl(char *str, int c)
 {
 	int		i;
 
 	i = -1;
+	if (!str)
+		return (NULL);
+	if (c == '\0')
+		return ((char *)&str[ft_strlen(str)]);
 	while (str[++i])
 		if (str[i] == (char) c)
 			return ((char *) &str[i]);
@@ -58,6 +62,11 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	i = -1;
 	j = -1;
+	if (!s1)
+	{
+		s1 = (char *)malloc(sizeof(char) * 1);
+		s1[0] = '\0';
+	}
 	s3 = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s1 || !s2 || !s3)
 		return (NULL);
@@ -69,5 +78,6 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	while (s2[++j])
 		s3[i++] = s2[j];
 	s3[i] = '\0';
+	free(s1);
 	return (s3);
 }
