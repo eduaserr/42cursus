@@ -6,7 +6,7 @@
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/08 16:45:11 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/08 21:31:47 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,38 @@ char	*ft_strchr_gnl(char *str, int c)
 	return (NULL);
 }
 
-char	*ft_strdup_gnl(char *str)
+char	*ft_substr_gnl(char const *s, unsigned int start, size_t len)
 {
-	char	*dup;
+	char	*substr;
+	size_t	i;
+
+	i = -1;
+	if (start >= ft_strlen_gnl(s))
+		return (ft_strdup_gnl(""));
+	if (len + start > ft_strlen_gnl(s))
+		len = ft_strlen_gnl(s) - start;
+	substr = (char *)malloc(sizeof(char) * len + 1);
+	if (!substr)
+		return (NULL);
+	while (++i < len)
+		substr[i] = s[i + start];
+	substr[i] = '\0';
+	return (substr);
+}
+
+char	*ft_strdup_gnl(const char *s1)
+{
+	char	*p;
 	int		i;
 
 	i = -1;
-	dup = malloc(sizeof(char) * ft_strlen_gnl(str) + 1);
-	if (!dup)
+	p = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!p)
 		return (NULL);
-	while (str[++i])
-		dup[i] = str[i];
-	dup[i] = '\0';
-	return (dup);
+	while (s1[++i])
+		p[i] = s1[i];
+	p[i] = '\0';
+	return (p);
 }
 
 char	*ft_strjoin_gnl(char *s1, char *s2)
@@ -79,7 +98,6 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	}
 	while (s2[++j])
 		s3[i++] = s2[j];
-	free(s2);
 	s3[i] = '\0';
 	free(s1);
 	return (s3);
@@ -102,17 +120,22 @@ char	*ft_read(int fd, char *buff)
 			return (NULL);
 		}
 		add_buff[bytes_read] = '\0';
-		if (!buff)
-			buff = ft_strdup_gnl(add_buff);		//intentar usar solo strjoin para ambos casos
-		else
-			buff = ft_strjoin_gnl(buff, add_buff);
+		buff = ft_strjoin_gnl(buff, add_buff);
 	}
+	free(add_buff);
 	return (buff);
 }
 
-char	*ft_line(char *stash, char *line)
+char	*ft_line(char *buff, char *stash)
 {
-	
+	char	*rest;
+
+	if (ft_strchr_gnl(buff, '\n'))
+	{
+		rest = ft_strchr_gnl(buff, '\n') + 1;
+		buff = ft_substr_gnl();
+	}
+	return (rest);
 }
 
 char	*get_next_line(int fd)
@@ -128,7 +151,7 @@ char	*get_next_line(int fd)
 	buff = ft_read(fd, buff);
 	if (!buff)
 		return (NULL);
-	line = ft_line(buff, line);
+	buff = ft_line(buff, stash);
 	if (!line)
 		return (NULL);
 	return (line);
