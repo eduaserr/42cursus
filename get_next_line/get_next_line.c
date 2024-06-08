@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/06 18:33:17 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/08 16:45:11 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ char	*ft_strchr_gnl(char *str, int c)
 	i = -1;
 	if (!str)
 		return (NULL);
+	if (c == '\0')
+		return ((char *)&str[ft_strlen_gnl(str)]);
 	while (str[++i])
+		if (str[i] == (char) c)
+			return ((char *) &str[i]);
 	if (str[i] == (char) c)
 		return ((char *) &str[i]);
 	return (NULL);
@@ -60,19 +64,24 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	i = -1;
 	j = -1;
-	s3 = (char *)malloc(sizeof(char) * ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
+	if (!s1)
+	{
+		s1 = (char *)malloc(sizeof(char) * 1);
+		s1[0] = '\0';
+	}
+	s3 = malloc(sizeof(char) * ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
 	if (!s1 || !s2 || !s3)
 		return (NULL);
-		if (s1)
-		{
-			while (s1[++i])
-				s3[i] = s1[i];
-			free(s1);
-		}
+	if (s1)
+	{
+		while (s1[++i])
+			s3[i] = s1[i];
+	}
 	while (s2[++j])
 		s3[i++] = s2[j];
 	free(s2);
 	s3[i] = '\0';
+	free(s1);
 	return (s3);
 }
 
@@ -84,10 +93,10 @@ char	*ft_read(int fd, char *buff)
 	add_buff = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!add_buff)
 		return (NULL);
-	while (!ft_strchr_gnl(buff, '\n') && bytes_read != 0)
+	while (!ft_strchr_gnl(add_buff, '\n') && bytes_read != 0)
 	{
 		bytes_read = read(fd, add_buff, BUFFER_SIZE);
-			if (bytes_read == -1)
+		if (bytes_read == -1)
 		{
 			free(add_buff);
 			return (NULL);
@@ -95,7 +104,8 @@ char	*ft_read(int fd, char *buff)
 		add_buff[bytes_read] = '\0';
 		if (!buff)
 			buff = ft_strdup_gnl(add_buff);		//intentar usar solo strjoin para ambos casos
-		buff = ft_strjoin_gnl(buff, add_buff);
+		else
+			buff = ft_strjoin_gnl(buff, add_buff);
 	}
 	return (buff);
 }
