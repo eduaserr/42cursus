@@ -6,11 +6,18 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 12:22:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/10 19:23:22 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/10 21:48:24 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+char	*ft_free_str(char **str)
+{
+	free(*str);
+	*str = NULL;
+	return (NULL);
+}
 
 char	*ft_strchr_gnl(char *str, int c)
 {
@@ -96,6 +103,6 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	while (s2[++j])
 		s3[i++] = s2[j];
 	s3[i] = '\0';
-	/*free(s1);*/
+	ft_free_str(s1);
 	return (s3);
 }

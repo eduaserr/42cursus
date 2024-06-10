@@ -6,11 +6,18 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/10 20:21:47 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/10 21:58:19 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+char	*ft_free_str(char **str)
+{
+	free(*str);
+	*str = NULL;
+	return (NULL);
+}
 
 size_t	ft_strlen_gnl(char *str)
 {
@@ -86,17 +93,21 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	if (!s1)
 	{
 		s1 = (char *)malloc(sizeof(char) * 1);
+		if(!s1)
+			return (NULL);
 		s1[0] = '\0';
 	}
 	s3 = malloc(sizeof(char) * ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
-	if (!s1 || !s2 || !s3)
+	if (!s1 || !s2)
 		return (NULL);
+	if (!s3)
+		/*return (ft_free_str(&s1));*/
 	while (s1[++i])
 		s3[i] = s1[i];
 	while (s2[++j])
 		s3[i++] = s2[j];
 	s3[i] = '\0';
-	/*free(s1);*/
+	/*free(&s1);*/
 	return (s3);
 }
 
