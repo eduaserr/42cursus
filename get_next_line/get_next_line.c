@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/10 19:45:06 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/10 20:21:47 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,11 +129,7 @@ char	*ft_line(char *buff, char **line)
 	int		l_buff;
 
 	l_buff = ft_strlen_gnl(buff);
-	if (ft_strchr_gnl(buff, '\n') && ft_strchr_gnl(buff, '\0'))
-	{
-		
-	}
-	else if (ft_strchr_gnl(buff, '\n'))
+	if (ft_strchr_gnl(buff, '\n'))
 	{
 		rest = ft_strchr_gnl(buff, '\n') + 1;
 		(*line) = ft_substr_gnl(buff, 0, l_buff - (ft_strlen_gnl(rest)) - 1);
