@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/10 21:58:19 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/11 14:15:45 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,13 +101,12 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	if (!s3)
-		/*return (ft_free_str(&s1));*/
+		return (ft_free_str(&s1));
 	while (s1[++i])
 		s3[i] = s1[i];
 	while (s2[++j])
 		s3[i++] = s2[j];
 	s3[i] = '\0';
-	/*free(&s1);*/
 	return (s3);
 }
 
@@ -119,7 +118,8 @@ char	*ft_read(int fd, char *buff)
 	add_buff = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!add_buff)
 		return (NULL);
-	while (!ft_strchr_gnl(add_buff, '\n') && bytes_read != 0)
+		bytes_read = 1;
+	while (add_buff && !ft_strchr_gnl(add_buff, '\n') && bytes_read != 0)
 	{
 		bytes_read = read(fd, add_buff, BUFFER_SIZE);
 		if (bytes_read == -1)
@@ -143,9 +143,14 @@ char	*ft_line(char *buff, char **line)
 	if (ft_strchr_gnl(buff, '\n'))
 	{
 		rest = ft_strchr_gnl(buff, '\n') + 1;
-		(*line) = ft_substr_gnl(buff, 0, l_buff - (ft_strlen_gnl(rest)) - 1);
+		(*line) = ft_substr_gnl(buff, 0, l_buff - (ft_strlen_gnl(rest)));
+		return (rest);
 	}
-	return (rest);
+	else
+	{
+		(*line) = ft_substr_gnl(buff, 0, l_buff);
+		return (buff);
+	}
 }
 
 char	*get_next_line(int fd)
@@ -164,12 +169,34 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int	main(void)
-{
-	int			fd;
+#include <stdio.h>
+#include <unistd.h>
+#include <time.h>
 
-	fd = open("txt", O_RDONLY);
+void delay(float sec) {
+    time_t start;
+    time_t current;
+    time(&start);
+    do {
+        time(&current);
+    } while (difftime(current, start) < sec);
+}
 
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
+int main(void) {
+    int fd;
+    char *line;
+    fd = open("txt", O_RDONLY);
+    line = get_next_line(fd);
+    while (line) {
+        printf("%s", line);
+        fflush(stdout); // Flush the output buffer
+        line = get_next_line(fd);
+        if (!line) {
+            printf("(null)\n");
+            fflush(stdout); // Flush the output buffer
+        }
+        delay(1); // Delay for 1 second
+    }
+    close(fd);
+    return 0;
 }
