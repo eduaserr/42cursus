@@ -6,7 +6,7 @@
 /*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 12:22:59 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/10 15:55:07 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/14 18:50:36 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
+# include <time.h>
+
+char	*ft_free_str(char **str);
 
 size_t	ft_strlen_gnl(char *str);
 
@@ -34,6 +37,5 @@ char	*ft_substr_gnl(char *str, unsigned int start, size_t len);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 
 char	*get_next_line(int fd);
-
 
 #endif
