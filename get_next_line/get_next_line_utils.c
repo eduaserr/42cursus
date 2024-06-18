@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduaserr <eduaserr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 12:22:56 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/17 21:16:05 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/18 16:24:07 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strchr_gnl(char *str, int c)
+char	*ft_strchr(char *str, int c)
 {
 	int		i;
 
 	i = -1;
-	if (!str)
-		return (NULL);
 	while (str[++i])
 		if (str[i] == (char) c)
 			return ((char *) &str[i]);
@@ -27,13 +25,11 @@ char	*ft_strchr_gnl(char *str, int c)
 	return (NULL);
 }
 
-ssize_t	ft_strlen_gnl(char *str)
+ssize_t	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (!str)
-		return (0);
 	while (str[i])
 		i++;
 	return (i);
@@ -45,10 +41,10 @@ char	*ft_substr_gnl(char *str, unsigned int start, ssize_t len)
 	ssize_t	i;
 
 	i = -1;
-	if (start >= ft_strlen_gnl(str))
-		return (ft_strdup_gnl(""));
-	if (len + start > ft_strlen_gnl(str))
-		len = ft_strlen_gnl(str) - start;
+	if (start >= ft_strlen(str))
+		return (NULL);
+	if (len + start > ft_strlen(str))
+		len = ft_strlen(str) - start;
 	substr = (char *)malloc(sizeof(char) * len + 1);
 	if (!substr)
 		return (NULL);
@@ -58,13 +54,13 @@ char	*ft_substr_gnl(char *str, unsigned int start, ssize_t len)
 	return (substr);
 }
 
-char	*ft_strdup_gnl(char *str)
+char	*ft_strdup(char *str)
 {
 	char	*p;
 	int		i;
 
 	i = -1;
-	p = (char *)malloc(sizeof(char) * ft_strlen_gnl(str) + 1);
+	p = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
 	if (!p)
 		return (NULL);
 	while (str[++i])
@@ -82,10 +78,10 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	i = -1;
 	j = -1;
 	if (!s1)
-		s1 = ft_strdup_gnl("");
-	if (!s1 ||!s2)
+		s1 = ft_strdup("");
+	if (!s1)
 		return (NULL);
-	s3 = malloc(sizeof(char) * ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
+	s3 = malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s3)
 		return (NULL);
 	while (s1[++i])
