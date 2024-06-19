@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 16:47:18 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/19 13:00:05 by eduaserr         ###   ########.fr       */
+/*   Created: 2024/06/19 11:48:24 by eduaserr          #+#    #+#             */
+/*   Updated: 2024/06/19 12:39:29 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_free_str(char **str)
 {
@@ -51,7 +51,7 @@ char	*ft_line(char *buff, char **line)
 	char	*rest;
 	int		l_buff;
 
-	rest = NULL;
+	*line = NULL;
 	l_buff = ft_strlen(buff);
 	if (!buff || !line)
 		return (NULL);
@@ -59,27 +59,29 @@ char	*ft_line(char *buff, char **line)
 	{
 		rest = ft_strdup(ft_strchr(buff, '\n') + 1);
 		(*line) = ft_substr_gnl(buff, 0, l_buff - ft_strlen(rest));
+		ft_free_str(&buff);
+		return (rest);
 	}
 	else
 	{
 		(*line) = ft_substr_gnl(buff, 0, l_buff);
+		ft_free_str(&buff);
+		return (NULL);
 	}
-	ft_free_str(&buff);
-	return (rest);
 }
 
 char	*get_next_line(int fd)
 {
-	static char		*buff;
+	static char		*buff[1024];
 	char			*line;
 
 	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!buff || !ft_strchr(buff, '\n'))
-		buff = ft_read(fd, buff);
-	if (!buff)
+	if (!buff[fd] || !ft_strchr(buff[fd], '\n'))
+		buff[fd] = ft_read(fd, buff[fd]);
+	if (!buff[fd])
 		return (NULL);
-	buff = ft_line(buff, &line);
+	buff[fd] = ft_line(buff[fd], &line);
 	return (line);
 }
