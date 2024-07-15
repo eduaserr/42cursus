@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduaserr <eduaserr@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: eduaserr < eduaserr@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 12:22:59 by eduaserr          #+#    #+#             */
-/*   Updated: 2024/06/19 12:37:35 by eduaserr         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:18:23 by eduaserr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
