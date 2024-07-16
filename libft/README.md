@@ -3,6 +3,22 @@
 	<code>Libft</code> is the first project in the Common Core from 42Cursus. In this proyect you should learn how to program some standart library C functions, as many other functions that will be usefull for future proyects.
 </div>
 
+### Makefile
+
+For compilation, you can use Makefile by tipyng `make` + rule command desired in the same directory as Makefile is ubicated.
+  
+A Makefile is a special file that you create name Makefile, it contains shell commands. While in the directory containing this Makefile, you will run the make command and the commands written in the Makefile will be executed. Makefile is a shell script that automate compiling repetitive tasks of compiling.  
+A Makefile contains a list of rules. These rules tell the system what commands you want to execute. Most of the time, these rules are commands to compile, or recompile, a series of files.
+
+### Rules
+
+* all
+* clean
+* fclean
+* re
+* bonus
+* rebonus
+
 ## Functions
 
 Original Functions|Description|Aditional functions|Description|BONUS|Description
@@ -30,4 +46,3 @@ Original Functions|Description|Aditional functions|Description|BONUS|Description
 [ft_strlcpy](#ft_strlcpy)|Copies a string up to a certain size.
 [ft_strlcat](#ft_strlcat)|Concatenates strings with a specified size limit.
 [ft_atoi](#ft_atoi)|Converts a string into an integer.
-
