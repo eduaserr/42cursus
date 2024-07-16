@@ -7,10 +7,11 @@
 
 For compilation, you can use Makefile by tipyng `make` + rule command desired in the same directory as Makefile is ubicated.
   
-A Makefile is a special file that you create name Makefile, it contains shell commands. While in the directory containing this Makefile, you will run the make command and the commands written in the Makefile will be executed. Makefile is a shell script that automate compiling repetitive tasks of compiling.  
-A Makefile contains a list of rules. These rules tell the system what commands you want to execute. Most of the time, these rules are commands to compile, or recompile, a series of files.
+A Makefile is a special file that you create name Makefile, it contains shell commands. While in the directory containing this Makefile, you will run the make command and the commands written in the Makefile will be executed. Makefile is a shell script that automate compiling repetitive tasks of compiling.
 
 ### Rules
+
+A Makefile contains a list of rules. These rules tell the system what commands you want to execute. Most of the time, these rules are commands to compile, or recompile, a series of files.
 
 * all
 * clean
