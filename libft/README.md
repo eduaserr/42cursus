@@ -1,4 +1,4 @@
-<h1 align="center"> ~LIBFT~ <br><img alt="Static Badge" src="https://img.shields.io/badge/125%2F100-green?style=plastic&logoColor=green&label=success&link=https%3A%2F%2Fgithub.com%2Feduaserr%2F42cursus"></h1>
+<h1 align="center"> ~LIBFT~ <br><img alt="Static Badge" src="https://img.shields.io/badge/125%2F100-green?style=plastic&logoColor=green&label=success"></h1>
 <div align="justify">
 	<code>Libft</code> is the first project in the Common Core from 42Cursus. In this proyect you should learn how to program some standart library C functions, as many other functions that will be usefull for future proyects.
 </div>
