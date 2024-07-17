@@ -4,8 +4,16 @@ Each character is written into the output until we reach '%'. When the function 
 
 ### How to ... [Printf](/ft_printf)
 
-<div>You must include first "stdio.h" library.<br>
-</div>
+<div>You must include first " stdio.h " library.</div>
+
+	#include <stdio.h>
+
+	int main()
+	{
+		printf("hi, my name is %s, and I'm %i", "Edu", 25);
+		return ;
+	}
+<div>Here we are passing 29 bytes characters in the first string, the exit output will be 30.</div>
 <h3>- Format specifiers</h3>
 <table align="center">
 	<tr>
