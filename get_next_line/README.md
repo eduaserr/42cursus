@@ -1,1 +1,2 @@
 <h1 align="center"> ~GET_NEXT_LINE~ <br><img alt="success 125/100" src="https://img.shields.io/badge/125%2F100-green?style=plastic&logoColor=green&label=success"></h1>
+<div align="justify">This proyect is about a function that returns a line read from a file descriptor (fd). Everytime we give a call, the function return a new line, until we reach the end of the text. Every string is null terminated. Last line is all NULL</div>
