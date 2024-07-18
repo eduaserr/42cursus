@@ -54,8 +54,8 @@ Each character is written as output until we reach '%'. When the function finds 
 <div align="justify">Variadics functions are functions that can receive a variable number of arguments.</div>
 
 	int	ft_printf(char str, ...)
-<div align="justify">In this case our ft_printf receive a string as a first argument, and this (...) means that the function has variadic arguments.</div><br>
-<p align="center"><a href="https://learn.microsoft.com/es-es/cpp/preprocessor/variadic-macros?view=msvc-170"> What are variadic macros?</a></p>
+<div align="justify">In this case our <a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_printf.c"><u>ft_printf</u></a> receive a string as a first argument, and this (...) means that the function has variadic arguments.</div><br><br>
+<p align="center"><a href="https://learn.microsoft.com/es-es/cpp/preprocessor/variadic-macros?view=msvc-170"> What are variadic macros?</a></p><br>
 	<div align="left" style="text-indent: 25px;"><ul><li><b>va_start</b> : Macro used to initialize a <i>'va_list'</i> object to start accessing the additional arguments from the last fixed argument received by the function. It must be called before using <i>'va_arg'</i>.</ul></div>
 	<div align="left" style="text-indent: 25px;"><ul><b><li>va_list</b> : Is a data type used to access the additional arguments of a variadic function. A variable of this type is declared in the function that will receive the variable arguments.</ul></div>
 	<div align="left" style="text-indent: 25px;"><ul><b><li>va_arg</b> : Macro used to access each additional argument. It takes the <i>'va_list'</i> object and the data type of the next argument. Each call to <i>'va_arg'</i> retrieves the next argument in the list.</ul></div>
