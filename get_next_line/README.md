@@ -1,0 +1,1 @@
+<h1 align="center"> ~GET_NEXT_LINE~ <br><img alt="success 125/100" src="https://img.shields.io/badge/125%2F100-green?style=plastic&logoColor=green&label=success"></h1>
