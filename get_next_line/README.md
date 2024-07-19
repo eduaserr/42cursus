@@ -7,7 +7,7 @@ As soon that we don't have more text inside the fd, our function will return <i>
 <h3>What is a File Descriptor?</h3>
 <p>A file descriptor is an int variable that uniquely identifies an open file.<p>
 <div>
-	<table align="center">
+	<table align="justify">
 		<tr>
 			<th>int Value<th>output</th>
 		</tr>
@@ -22,5 +22,6 @@ As soon that we don't have more text inside the fd, our function will return <i>
 		</tr>
 	</table>
 </div>
+
 <h3>- Static variables</h3>
 <div align="justify"></div>
