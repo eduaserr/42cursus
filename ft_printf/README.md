@@ -88,7 +88,8 @@ Each character is written as output until we reach '%'. When the function finds 
 	</table>
 	</div>
 	<div>
-	<table border="1" align="right">
+	<table>
+	<div style="margin-left: 20px;">
 		<th align="center">*ft_funlibft_pf functions</th>
 		<th align="left">Description</th>
 			<tr align="left">
