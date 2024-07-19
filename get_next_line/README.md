@@ -15,7 +15,7 @@ As soon that we don't have more text inside the fd, our function will return <i>
 		<tr>
 			<td>1<td>stdout<td>Fd used when writing to the terminal.</td></tr>
 		<tr>
-			<td>2<td>stderr<td>used when writing an error to the terminal, a program which logs errors to a file.</td></tr>
+			<td>2<td>stderr<td>Fd used when writing an error to the terminal, a program which logs errors to a file.</td></tr>
 	</table>
 </div>
 
