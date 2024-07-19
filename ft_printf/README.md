@@ -64,8 +64,8 @@ Each character is written as output until we reach '%'. When the function finds 
 <br>
 <br>
 <h2>Functions</h2>
-<div style="display: flex; justify-content: space-between;">
-	<div>
+<div style="display: flex;">
+	<div style="margin-right: 20%;"  style="margin-left: 20%;">
 	<table>
 		<th align="center">Printf Functions</th>
 		<th align="left">Description</th>
@@ -88,7 +88,7 @@ Each character is written as output until we reach '%'. When the function finds 
 	</table>
 	</div>
 	<table>
-	<div  style="margin-right: 20%;">
+	<div style="margin-right: 20%;"  style="margin-left: 20%;">
 		<th align="center">*ft_funlibft_pf functions</th>
 		<th align="left">Description</th>
 			<tr align="left">
