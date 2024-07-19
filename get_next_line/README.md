@@ -6,20 +6,16 @@ As soon that we don't have more text inside the fd, our function will return <i>
 <br>
 <h3>What is a File Descriptor?</h3>
 <p>A file descriptor is an int variable that uniquely identifies an open file.<p>
-<div>
+<div align="left">
 	<table align="justify">
 		<tr>
-			<th>int Value<th>output</th>
-		</tr>
+			<th>int Value<th>output<th>Description</th></tr>
 		<tr>
-			<td>0<td>stdin</td>
-		</tr>
+			<td>0<td>stdin<td>Fd used when reading user input from the terminal.</td></tr>
 		<tr>
-			<td>1<td>stdout</td>
-		</tr>
+			<td>1<td>stdout<td>Fd used when writing to the terminal.</td></tr>
 		<tr>
-			<td>2<td>stderr</td>
-		</tr>
+			<td>2<td>stderr<td>used when writing an error to the terminal, a program which logs errors to a file.</td></tr>
 	</table>
 </div>
 
