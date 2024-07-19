@@ -64,45 +64,61 @@ Each character is written as output until we reach '%'. When the function finds 
 <br>
 <br>
 <h2>Functions</h2>
-<div>
-	<table align="left">
-		<th align="center">Printf Functions</th>
-		<th align="left">Description</th>
-			<tr align="left">
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_funlibft_pf</a></td>
-				<td>Edited functions from <a href="https://github.com/eduaserr/42cursus/tree/master/libft">libft</a> .</td>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_printf.c">ft_printf</a></td>
-				<td>Recreates printf function.</td>
-			</tr>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/libft/ft_strlen.c">ft_strlen</a></td>
-				<td>Returns the total lenght of the string.</td>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_printf.c">ft_fillformat_pf</a></td>
-				<td>Chooses what type of variable is going to print.</td>
-			</tr>
-			</tr>
-			</tr>
-	</table>
-	<table align="right">
-		<th align="center">*ft_funlibft_pf functions</th>
-		<th align="left">Description</th>
-			<tr align="left">
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putchar_pf</a></td>
-				<td>Prints character and increments <code>count</code> .</td>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putnbr_pf</a></td>
-				<td>Prints numbers in decimal base.<br>It puts too numbers in hexadecimal base.</td>
-			</tr>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putstr_pf</a></td>
-				<td>Prints a string.</td>
-			<tr>
-				<td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putptr_pf</a></td>
-				<td>Prints a pointer in hexadecimal base, adding "0x" before.</td>
-			</tr>
-			</tr>
-			</tr>
-	</table>
+<div style="width: 100%; display: flex; justify-content: space-between;">
+  <div style="flex: 1; margin-right: 10px;">
+    <table style="width: 100%;">
+      <thead>
+        <tr>
+          <th align="center">Printf Functions</th>
+          <th align="left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="left">
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_funlibft_pf</a></td>
+          <td>Edited functions from <a href="https://github.com/eduaserr/42cursus/tree/master/libft">libft</a>.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_printf.c">ft_printf</a></td>
+          <td>Recreates printf function.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/libft/ft_strlen.c">ft_strlen</a></td>
+          <td>Returns the total length of the string.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_printf.c">ft_fillformat_pf</a></td>
+          <td>Chooses what type of variable is going to print.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="flex: 1; margin-left: 10px;">
+    <table style="width: 100%;">
+      <thead>
+        <tr>
+          <th align="center">*ft_funlibft_pf functions</th>
+          <th align="left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="left">
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putchar_pf</a></td>
+          <td>Prints character and increments <code>count</code>.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putnbr_pf</a></td>
+          <td>Prints numbers in decimal base.<br>It puts too numbers in hexadecimal base.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putstr_pf</a></td>
+          <td>Prints a string.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/eduaserr/42cursus/blob/master/ft_printf/ft_funlibft_pf.c">ft_putptr_pf</a></td>
+          <td>Prints a pointer in hexadecimal base, adding "0x" before.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
