@@ -65,7 +65,7 @@ Each character is written as output until we reach '%'. When the function finds 
 <br>
 <h2>Functions</h2>
 <div align="center">
-	<table align="left" width="25%">
+	<table align="left" width="40%">
 		<th align="center">Printf Functions</th>
 		<th align="left">Description</th>
 			<tr align="left">
@@ -85,7 +85,7 @@ Each character is written as output until we reach '%'. When the function finds 
 			</tr>
 			</tr>
 	</table>
-	<table align="right" width="25%">
+	<table align="right">
 		<th align="center">*ft_funlibft_pf functions</th>
 		<th align="left">Description</th>
 			<tr align="left">
