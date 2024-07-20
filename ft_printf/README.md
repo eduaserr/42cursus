@@ -64,7 +64,7 @@ Each character is written as output until we reach '%'. When the function finds 
 <br>
 <br>
 <h2>Functions</h2>
-<div style="font-size: 7px;">
+<div">
 	<table align="left">
 		<th align="center">Printf Functions</th>
 		<th align="left">Description</th>
