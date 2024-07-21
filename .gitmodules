@@ -1,3 +1,6 @@
 [submodule "Libft"]
 	path = Libft
 	url = https://github.com/eduaserr/Libft
+[submodule "Get_Next_Line"]
+	path = Get_Next_Line
+	url = https://github.com/eduaserr/Get_Next_Line
