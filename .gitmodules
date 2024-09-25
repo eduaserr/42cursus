@@ -10,3 +10,6 @@
 [submodule "push_swap"]
 	path = push_swap
 	url = https://github.com/eduaserr/push_swap
+[submodule "minitalk"]
+	path = minitalk
+	url = https://github.com/eduaserr/minitalk
