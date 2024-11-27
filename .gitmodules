@@ -13,3 +13,6 @@
 [submodule "minitalk"]
 	path = minitalk
 	url = https://github.com/eduaserr/minitalk
+[submodule "42-Exam"]
+	path = 42-exam
+	url = https://github.com/eduaserr/42-exam.git
