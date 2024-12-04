@@ -16,3 +16,6 @@
 [submodule "42-Exam"]
 	path = 42-exam
 	url = https://github.com/eduaserr/42-exam.git
+[submodule "So_Long"]
+	path = So_Long
+	url = https://github.com/eduaserr/So_Long.git
