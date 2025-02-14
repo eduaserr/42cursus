@@ -19,3 +19,6 @@
 [submodule "So_Long"]
 	path = So_Long
 	url = https://github.com/eduaserr/So_Long.git
+[submodule "minishell"]
+	path = minishell
+	url = https://github.com/eduaserr/minishell.git
