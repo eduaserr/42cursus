@@ -2,15 +2,23 @@
 
 This repository contains the following projects and files:
 
-42cursus\
-├── 42-exam\
-├── ft_printf\
-├── Get_Next_Line\
-├── Libft\
-├── minishell\
-├── minitalk\
-├── push_swap\
-├── So_Long
+42cursus/
+├──	42-exam/
+│	├──	Exam02/
+│	│	├──	LVL01/
+│	│	├──	LVL02/
+│	│	├──	LVL03/
+│	│	├──	LVL04/
+│	├──	Exam03/
+│	│	├──	ft_printf/
+│	│	├──	get_next_line/
+├──	ft_printf/
+├──	Get_Next_Line/
+├──	Libft/
+├──	minishell/
+├──	minitalk/
+├──	push_swap/
+└──	So_Long/
 
 Each directory represents a different project or component within the 42cursus curriculum. Below is a brief description of each:
 
@@ -21,7 +29,6 @@ Each directory represents a different project or component within the 42cursus c
 - **[minishell](minishell/)**: A simple shell implementation.
 - **[minitalk](minitalk/)**: A project for small client-server communication.
 - **[push_swap](push_swap/)**: A sorting algorithm project.
-- **[README.md](README.md)**: This file, providing an overview of the repository.
 - **[So_Long](So_Long/)**: A small 2D game project.
 
 Feel free to explore each directory for more detailed information about each project.
