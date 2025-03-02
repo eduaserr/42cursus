@@ -2,23 +2,23 @@
 
 This repository contains the following projects and files:
 
-42cursus\
-├──	42-exam\
-│	├──	Exam02\
-│	│	├──	LVL01\
-│	│	├──	LVL02\
-│	│	├──	LVL03\
-│	│	├──	LVL04\
-│	├──	Exam03\
-│	│	├──	ft_printf\
-│	│	├──	get_next_line\
-├──	ft_printf\
-├──	Get_Next_Line\
-├──	Libft\
-├──	minishell\
-├──	minitalk\
-├──	push_swap\
-└──	So_Long\
+[42cursus](../42cursus)\
+├──	[42-exam](42-exam/)\
+│	├──	[Exam02](42-exam/Exam02)\
+│	│	├──	[LVL01](42-exam/Exam02/LVL01/)\
+│	│	├──	[LVL02](42-exam/Exam02/LVL02/)\
+│	│	├──	[LVL03](42-exam/Exam02/LVL03/)\
+│	│	├──	[LVL04](42-exam/Exam02/LVL04/)\
+│	├──	[Exam03](42-exam/Exam03)\
+│	│	├──	[ft_printf](42-exam/Exam03/ft_printf/)\
+│	│	├──	[get_next_line](42-exam/Exam03/get_next_line/)\
+├──	[ft_printf](ft_printf/)\
+├──	[Get_Next_Line](Get_Next_Line/)\
+├──	[Libft](Libft/)\
+├──	[minishell](minishell/)\
+├──	[minitalk](minitalk/)\
+├──	[push_swap](push_swap/)\
+└──	[So_Long](So_Long/)
 
 Each directory represents a different project or component within the 42cursus curriculum. Below is a brief description of each:
 
