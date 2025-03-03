@@ -2,14 +2,14 @@
 
 This repository contains the following projects and files:
 
-[42cursus](../42cursus)\
-├───	[42-exam](42-exam/)\
-│	┌─────	[Exam02](42-exam/Exam02)\
+[42cursus](https://github.com/eduaserr/42cursus)\
+├───	[42-exam](https://github.com/eduaserr/42-exam/tree/9f885dc993ff688f4b55522a3bbbb264c67a7af3)\
+│	┌─────	[Exam02](https://github.com/eduaserr/42-exam/tree/9f885dc993ff688f4b55522a3bbbb264c67a7af3/Exam02)\
 │	│	┌──────	[LVL01](42-exam/Exam02/LVL01/)\
 │	│	├──────	[LVL02](42-exam/Exam02/LVL02/)\
 │	│	├──────	[LVL03](42-exam/Exam02/LVL03/)\
 │	│	└──────	[LVL04](42-exam/Exam02/LVL04/)\
-│	├─────	[Exam03](42-exam/Exam03)\
+│	├─────	[Exam03](https://github.com/eduaserr/42-exam/tree/9f885dc993ff688f4b55522a3bbbb264c67a7af3/Exam03)\
 │	│	┌──────	[ft_printf](42-exam/Exam03/ft_printf/)\
 │	└	┴──────	[get_next_line](42-exam/Exam03/get_next_line/)\
 ├──────	[ft_printf](ft_printf/)\
