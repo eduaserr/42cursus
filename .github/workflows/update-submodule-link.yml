@@ -1,0 +1,33 @@
+name: Update Submodule Link
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Ejecuta el workflow cada día a la medianoche
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde GitHub
+
+jobs:
+  update-submodule-link:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio padre
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Clona también los submódulos
+          fetch-depth: 0
+
+      - name: Obtener el último commit del submódulo
+        run: echo "SUBMODULE_COMMIT=$(git -C 42-exam rev-parse HEAD)" >> $GITHUB_ENV
+
+      - name: Actualizar el archivo Markdown
+        run: |
+          sed -i "s|https://github.com/eduaserr/42-exam/blob/[a-f0-9]\+/|https://github.com/eduaserr/42-exam/blob/$SUBMODULE_COMMIT/|g" README.md
+
+      - name: Confirmar y subir cambios si hay modificaciones
+        run: |
+          git add README.md
+          git commit -m "updating readme links" || exit 0
+          git push
