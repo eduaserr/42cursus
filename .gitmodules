@@ -25,3 +25,6 @@
 [submodule "philosophers"]
 	path = philosophers
 	url = https://github.com/eduaserr/philosophers.git
+[submodule "CPP-Modules"]
+	path = CPP-Modules
+	url = https://github.com/eduaserr/CPP-Modules
