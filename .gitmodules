@@ -28,3 +28,6 @@
 [submodule "CPP-Modules"]
 	path = CPP-Modules
 	url = https://github.com/eduaserr/CPP-Modules
+[submodule "cub3d"]
+	path = cub3d
+	url = https://github.com/eduaserr/cub3d.git
