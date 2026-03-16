@@ -17,7 +17,10 @@ This repository contains the following projects and files:
 ├───  📁[Libft](https://github.com/eduaserr/Libft)\
 ├───  📁[minishell](https://github.com/eduaserr/minishell)\
 ├───  📁[minitalk](https://github.com/eduaserr/minitalk)\
+├───  📁[philosophers](https://github.com/eduaserr/philosophers)\
 ├───  📁[push_swap](https://github.com/eduaserr/push_swap)\
+├───  📁[CPP-Modules](https://github.com/eduaserr/CPP-Modules)\
+├───  📁[cub3d](https://github.com/eduaserr/cub3d)\
 └───  📁[So_Long](https://github.com/eduaserr/So_Long)
 
 Each directory represents a different project or component within the 42cursus curriculum. Below is a brief description of each:
@@ -28,7 +31,10 @@ Each directory represents a different project or component within the 42cursus c
 - **[Libft](https://github.com/eduaserr/Libft)**: My own custom C library with various utility functions.
 - **[minishell](https://github.com/eduaserr/minishell)**: A simple shell implementation.
 - **[minitalk](https://github.com/eduaserr/minitalk)**: A project for small client-server communication.
+- **[philosophers](https://github.com/eduaserr/philosophers)**: A multithreading simulation of the dining philosophers problem with mutex synchronization.
 - **[push_swap](https://github.com/eduaserr/push_swap)**: A sorting numbers algorithm project.
+- **[CPP-Modules](https://github.com/eduaserr/CPP-Modules)**: A collection of C++ modules and exercises focused on OOP fundamentals.
+- **[cub3d](https://github.com/eduaserr/cub3d)**: A 3D raycasting game engine inspired by Wolfenstein, built with MLX42.
 - **[So_Long](https://github.com/eduaserr/So_Long)**: A small 2D game project.
 
 Feel free to explore each directory for more detailed information about each project.
