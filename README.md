@@ -21,6 +21,7 @@ This repository contains the following projects and files:
 ├───  📁[push_swap](https://github.com/eduaserr/push_swap)\
 ├───  📁[CPP-Modules](https://github.com/eduaserr/CPP-Modules)\
 ├───  📁[cub3d](https://github.com/eduaserr/cub3d)\
+├───  📁[NetPractice](https://github.com/eduaserr/[NetPractice)\
 └───  📁[So_Long](https://github.com/eduaserr/So_Long)
 
 Each directory represents a different project or component within the 42cursus curriculum. Below is a brief description of each:
@@ -35,6 +36,7 @@ Each directory represents a different project or component within the 42cursus c
 - **[push_swap](https://github.com/eduaserr/push_swap)**: A sorting numbers algorithm project.
 - **[CPP-Modules](https://github.com/eduaserr/CPP-Modules)**: A collection of C++ modules and exercises focused on OOP fundamentals.
 - **[cub3d](https://github.com/eduaserr/cub3d)**: A 3D raycasting game engine inspired by Wolfenstein, built with MLX42.
+- **[NetPractice](https://github.com/eduaserr/[NetPractice)**: Networking exercises (10 levels) focused on IP addressing, subnetting, routing and gateway configuration.
 - **[So_Long](https://github.com/eduaserr/So_Long)**: A small 2D game project.
 
 Feel free to explore each directory for more detailed information about each project.
